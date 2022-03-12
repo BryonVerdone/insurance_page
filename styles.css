@@ -1,0 +1,34 @@
+/* 
+==========
+Variables
+==========
+*/
+:root {
+  --main-blue: #1757b8;
+  --secondary-blue: #3b84f2;
+  --main-orange: #ff7841;
+  --main-grey: #62656a;
+  --background-grey: #fafafa;
+  --footer-light: #303236;
+  --footer-dark: #24262a;
+  --ff-primary: 'Roboto Slab', serif;
+  --ff-secondary: 'Roboto', sans-serif;
+  --font-weight: 300;
+}
+
+/* 
+==========
+Global Styles
+==========
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
