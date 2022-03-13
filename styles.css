@@ -9,6 +9,7 @@ Variables
   --dark-blue: #0c4cac;
   --main-orange: #ff7841;
   --main-grey: #62656a;
+  --main-black: #303236;
   --background-grey: #fafafa;
   --footer-light: #303236;
   --footer-dark: #24262a;
@@ -33,6 +34,9 @@ ul {
 a {
   text-decoration: none;
 }
+.hidden {
+  display: none;
+}
 /* 
 ==========
 Header
@@ -50,8 +54,6 @@ Header
   width: 1170px;
   display: flex;
   justify-content: space-between;
-  /* flex-wrap: wrap; */
-  /* gap: 500px; */
   margin-left: auto;
   margin-right: auto;
   padding-left: 25px;
@@ -102,9 +104,64 @@ Header
   padding-bottom: 6px;
   border-radius: 2px;
 }
-.call {
-}
 
+/* 
+==========
+Navbar
+==========
+*/
+/* hide at 991px */
+.navbar ul {
+  display: flex;
+  justify-content: center;
+}
+.navbar ul > li > a {
+  text-transform: uppercase;
+  padding: 20px 25px;
+  font-size: 14px;
+  color: var(--main-black);
+}
+.navbar li {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-left: 1px solid #e2e6ed;
+}
+.navbar li:last-child {
+  border-right: 1px solid #e2e6ed;
+}
+.mobile-btn-container {
+  text-align: right;
+}
+.nav-toggle {
+  color: #ffff;
+  background: var(--main-blue);
+  padding: 9px 10px;
+  border-radius: 4px;
+  margin-top: 8px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+  transition: 380ms;
+}
+.nav-toggle:hover {
+  background: var(--main-orange);
+}
+/* Need to add transition in from top */
+.mobile-nav {
+  width: 100%;
+  background: #333333;
+}
+.mobile-item {
+  border: 1px solid #444;
+}
+.mobile-item * {
+  padding: 15px;
+  color: #ffff;
+
+  padding-left: 5px;
+}
+i {
+  margin-right: 10px;
+}
 /* 
 ==========
 Media queries
@@ -118,6 +175,19 @@ Media queries
     display: none;
   }
   .login-btn {
+    display: none;
+  }
+}
+@media screen and (max-width: 991px) {
+  .navbar {
+    display: none;
+  }
+}
+@media screen and (min-width: 991px) {
+  .mobile-btn-container {
+    display: none;
+  }
+  .mobile-nav {
     display: none;
   }
 }
